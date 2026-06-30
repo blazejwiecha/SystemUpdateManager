@@ -4,33 +4,27 @@ on:
   push:
   pull_request:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   shellcheck:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Show repository files
+      - name: Show files
         run: |
           pwd
           ls -la
-          find . -maxdepth 2 -type f
+          find . -maxdepth 3 -type f
 
       - name: Install ShellCheck
         run: sudo apt-get update && sudo apt-get install -y shellcheck
 
-      - name: Bash Syntax Check
+      - name: Bash syntax check
         run: |
-          bash -n system-update-manager.sh
+          find . -name "*.sh" -print -exec bash -n {} \;
 
       - name: Run ShellCheck
         run: |
-          shellcheck -x system-update-manager.sh
+          find . -name "*.sh" -print -exec shellcheck -x {} \;
