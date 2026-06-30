@@ -1,0 +1,19 @@
+# Logs
+*.log
+
+# Backup directories
+backup_*/
+sys_manager/
+.snapshots/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
