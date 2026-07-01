@@ -4,7 +4,7 @@
 
 ![Platform](https://img.shields.io/badge/platform-Linux-blue)
 ![Language](https://img.shields.io/badge/language-Bash-orange)
-![Version](https://img.shields.io/badge/version-v6.1-success)
+![Version](https://img.shields.io/badge/version-v6.3-success)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
